@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Context Menu with Icons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        .context-menu-area {
+            width: 400px;
+            height: 400px;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            user-select: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .context-menu {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            width: 180px;
+            border-radius: 5px;
+        }
+
+        .context-menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .context-menu ul li {
+            padding: 10px 15px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+
+        .context-menu ul li:hover {
+            background-color: #f0f0f0;
+        }
+
+        .context-menu ul li i {
+            margin-right: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+<body id="mainBody">
+
+<div class="context-menu" id="contextMenu" style="display: none">
+    <ul>
+        <li onclick="alert('Copy selected')"><i class="fas fa-copy"></i>Copy</li>
+        <li onclick="alert('Cut selected')"><i class="fas fa-cut"></i>Cut</li>
+        <li onclick="alert('Paste selected')"><i class="fas fa-paste"></i>Paste</li>
+        <li onclick="alert('Delete selected')"><i class="fas fa-trash-alt"></i>Delete</li>
+        <li onclick="alert('Open in new tab selected')"><i class="fas fa-external-link-alt"></i>Open in new tab</li>
+        <li onclick="alert('More info selected')"><i class="fas fa-info-circle"></i>More info</li>
+    </ul>
+</div>
+
+<script src="contextMenu%20Project.js"></script>
+
+</body>
+</html>
